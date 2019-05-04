@@ -23,7 +23,7 @@
                 <configuration>
                     <useSystemClassLoader>false</useSystemClassLoader>
                     <includes>
-                        <!--suppress UnresolvedMavenProperty -->
+                        suppress UnresolvedMavenProperty
                         <include>${package}</include>
                         <include>**/*$*</include>
                     </includes>
@@ -61,10 +61,17 @@
     <dependencies>
 
         <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>3.8.1</version>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>3.0.2</version>
         </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>3.0.2</version>
+            <scope>test</scope>
+        </dependency>
+
 
         <dependency>
             <groupId>junit</groupId>

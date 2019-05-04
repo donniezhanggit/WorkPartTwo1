@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 
 import static com.codeborne.selenide.Selenide.*;
 
-public class SearchResultPage {
+public class SearchResultPage extends MainPage {
 
     @FindBy(css = "#pnnext")
     private SelenideElement nextButtonSelector;
