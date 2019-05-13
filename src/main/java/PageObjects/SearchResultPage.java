@@ -1,5 +1,6 @@
 package PageObjects;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
@@ -13,10 +14,13 @@ public class SearchResultPage extends MainPage {
     @FindBy(css = "#pnnext")
     private SelenideElement nextButtonSelector;
 
+    @FindBy(css = ".iUh30")
+    private ElementsCollection pageLinks;
+
     private String linkSelector = ".iUh30";
 
     public WebSitePage openFirstLink() {
-        $$(By.cssSelector(linkSelector)).get(0).click();
+        pageLinks.get(0).click();
         return page(WebSitePage.class);
     }
 
